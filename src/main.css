@@ -1,76 +1,140 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 html {
   font-family: sans-serif;
-  --bg-color: #F3F4F4;
-  --fg-color: #2C2C2C;
-  --border-color: #BFC9D1;
+  --bg-color: light-dark(#CFCFCF, #252525);
+  --fg-color: light-dark(#252525, #cfcfcf);
+  --border-color: light-dark(#545454, #7d7d7d);
+  --accent-color: light-dark(#545454, #cfcfcf);
   --border-radius: 0.3em;
-  --accent-color: hsl(0deg, 0%, 85%);
   color: var(--fg-color);
+  color-scheme: light dark;
+  --padding: 0.3em;
 }
 
 body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  width: 90%;
   margin-inline: auto;
   background-color: var(--bg-color);
 }
 
-main {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  height: 100%;
-}
-
-section, aside {
-  padding: 1em;
-  border-radius: var(--border-radius);
-  border: 1px solid var(--border-color);
-}
-
 header {
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  background-color: light-dark(#252525, #CFCFCF);
+  color: light-dark(#CFCFCF, #252525);
 }
 
-nav > ul {
-  display: flex;
+header div {
+  justify-content: space-between;
+}
+
+header ul {
   list-style: none;
-  gap: 1em;
 }
 
-nav ul a {
+header a {
   text-decoration: none;
-  color: var(--fg-color);
-  padding: 0.3em 0.6em;
+  color: light-dark(#CFCFCF, #252525);
+  padding: var(--padding) 0.6em;
   border-radius: var(--border-radius);
-  border: transparent 2px solid;
 }
 
-nav ul a:hover {
-  background-color: var(--accent-color);
-  border: var(--border-color) 2px solid;
-  color: white;
+header a:hover {
+  background-color: var(--bg-color);
+  color: var(--fg-color);
 }
 
-a {
-  color: var(--accent-color);
+footer {
+  background-color: light-dark(#252525, #CFCFCF);
+  color: light-dark(#CFCFCF, #252525);
 }
 
-a:hover {
-  text-decoration: none;
+footer a{
+  color: var(--bg-color);
+  text-underline-offset: 0.3em;
+}
+
+.width {
+  width: min(70em, 100%);
+  margin-inline: auto;
+}
+
+.no-select {
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: default;
 }
 
 .padding {
-  padding: 1em 0 1em 0; 
+  padding: 1rem;
+}
+
+.gap {
+  gap: 1em;
+}
+
+.flex-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+/* Source: https://www.joshwcomeau.com/css/custom-css-reset/ */
+
+/* 1. Use a more-intuitive box-sizing model */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin and padding*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input, button, textarea, select {
+  font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+h1, h2, h3, h4, h5, h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
 }
