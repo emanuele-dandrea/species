@@ -1,3 +1,3 @@
-FROM nginx
-COPY src/ /usr/share/nginx/html/
+FROM php:8.2-fpm
 
+RUN docker-php-ext-install mysqli
