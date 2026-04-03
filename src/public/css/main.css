@@ -49,6 +49,10 @@ footer {
   color: light-dark(#CFCFCF, #252525);
 }
 
+footer p, a {
+  font-size: 0.8rem;
+}
+
 footer a{
   color: var(--bg-color);
   text-underline-offset: 0.3em;
