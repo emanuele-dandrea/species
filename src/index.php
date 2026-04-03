@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Species</title>
     <link rel="stylesheet" href="/public/css/main.css">
+    <?php include './includes/meta.php'; ?>
 </head>
 
 <body>
-    <?php include './includes/header.php';?>
+    <?php include './includes/header.php'; ?>
 
     <main class="width padding flex-wrapper">
         <section>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam ex, eius impedit reprehenderit molestiae inventore saepe in rem? Vel aperiam nihil porro tempora qui suscipit, laboriosam architecto numquam aut accusantium.
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit suscipit delectus quidem quos mollitia assumenda cumque, aut fugit, expedita commodi eveniet natus porro ut possimus culpa nulla libero molestiae iure.</p>
         </section>
         <aside>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat placeat praesentium blanditiis, quos dignissimos repellendus aliquid voluptate at autem. Odio eveniet aut, eos deleniti vero cupiditate quam obcaecati maxime quae?
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab numquam cumque perferendis reprehenderit repudiandae. Quis asperiores incidunt sint. Corrupti voluptates ullam esse ab doloribus reprehenderit impedit quas sed consequatur.</p>
         </aside>
     </main>
 
-    <?php include './includes/footer.php';?>
+    <?php include './includes/footer.php'; ?>
 </body>
 
 </html>
