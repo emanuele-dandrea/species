@@ -1,13 +1,28 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+
 html {
   font-family: sans-serif;
   --bg-color: light-dark(#CFCFCF, #252525);
   --fg-color: light-dark(#252525, #cfcfcf);
   --border-color: light-dark(#545454, #7d7d7d);
-  --accent-color: light-dark(#545454, #cfcfcf);
+  --accent-color: light-dark(gray, gray);
   --border-radius: 0.3em;
   color: var(--fg-color);
   color-scheme: light dark;
   --padding: 0.3em;
+}
+
+header a {
+  font-size: 1em;
+}
+
+main p {
+  font-size: 1em;
+}
+
+a:hover {
+  text-decoration: none;
+  color: var(--accent-color);
 }
 
 body {
@@ -39,11 +54,6 @@ header a {
   border-radius: var(--border-radius);
 }
 
-header a:hover {
-  background-color: var(--bg-color);
-  color: var(--fg-color);
-}
-
 footer {
   background-color: light-dark(#252525, #CFCFCF);
   color: light-dark(#CFCFCF, #252525);
@@ -56,6 +66,12 @@ footer p, a {
 footer a{
   color: var(--bg-color);
   text-underline-offset: 0.3em;
+}
+
+.active a{
+  background-color: var(--bg-color);
+  border-radius: var(--border-radius);
+  color: var(--fg-color);
 }
 
 .width {
@@ -113,7 +129,7 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg {
+img, picture, video, canvas, svg{
   display: block;
   max-width: 100%;
 }
