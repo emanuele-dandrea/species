@@ -1,8 +1,9 @@
-<?php
+<?
 include '../includes/config.php';
 
-$messages = "";
-$toastClass = "";
+$emailMessage = "";
+$usernameMessage = "";
+$successMessage = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
@@ -11,25 +12,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
     $checkEmailStmt = $link->prepare("SELECT email FROM users WHERE email = ?");
+    
     $checkEmailStmt->bind_param("s", $email);
     $checkEmailStmt->execute();
-
     $checkEmailStmt->store_result();
 
     if ($checkEmailStmt->num_rows > 0) {
-        $message = "Email ID already exists";
-        $toastClass = "#007bff"; 
+        $emailMessage = "<span style='display: block;'><i class='bi bi-exclamation-circle-fill'></i> <i>Email already in use!</i></span>";
     } else {
-        // Prepare and bind
         $stmt = $link->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
         $stmt->bind_param("sss", $username, $email, $hashedPassword);
 
         if ($stmt->execute()) {
-            $message = "Account created successfully";
-            $toastClass = "#28a745"; 
+            $successMessage = "Account created successfully";
         } else {
-            $message = "Error: " . $stmt->error;
-            $toastClass = "#dc3545"; 
+            $successMessage = "Error: " . $stmt->error;
         }
 
         $stmt->close();
@@ -55,10 +52,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <?php include '../includes/header.php'; ?>
     <main class="padding flex-wrapper">
         <form action="" method="post">
-            <h2>Login into Species</h2>
-            <input type="text" placeholder="Username" name="username"><br>
-            <input type="text" placeholder="Email" name="email"><br>
-            <input type="password" placeholder="Password" name="password"><br>
+            <h2>Register on Species</h2>
+            <? echo $usernameMessage; ?>
+            <input type="text" placeholder="Username" name="username" required><br>
+            <? echo $emailMessage; ?>
+            <input type="text" placeholder="Email" name="email" required><br>
+            <input type="password" placeholder="Password" name="password" required><br>
             <input type="submit" value="Register 😄" id="submit"><br>
             <a href="/login/">Already registered?</a>
         </form>
@@ -82,7 +81,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         cursor: default;
     }
 
-    input {
+    input{
         margin-bottom: 1rem;
         padding: 0.3rem 0.6rem;
         border-radius: var(--border-radius);
@@ -91,6 +90,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         color: var(--bg-color);
     }
 
+    span {
+        width: 100%;
+        text-align: left;
+        margin-bottom: 1em;
+    }
+    
     input:last-child {
         margin: 0;
     }
