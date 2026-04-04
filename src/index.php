@@ -10,7 +10,10 @@
 </head>
 
 <body>
-    <?php include './includes/header.php'; ?>
+    <div>
+        <?php include './includes/header.php'; ?>
+        <? include './includes/utils-bar.php' ?>
+    </div>
     <section class="width padding flex-wrapper" style="align-items: start; justify-content: start; gap: 5em;">
         <div>
             <h2>Our encyclopedia for more<br>equal <i>knowledge</i></h2>
