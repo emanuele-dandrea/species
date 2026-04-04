@@ -29,12 +29,17 @@ $currentDir = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 </header>
 
 <style>
-div.flex-wrapper{
-    gap: 1em;
-}
-#logo {
-    img {
-        width: 3em;
+    div.flex-wrapper {
+        gap: 1em;
     }
-}
+
+    header div.flex-wrapper {
+        flex-wrap: wrap;
+    }
+
+    #logo {
+        img {
+            width: 3em;
+        }
+    }
 </style>
