@@ -59,16 +59,17 @@ footer {
   color: light-dark(#CFCFCF, #252525);
 }
 
-footer p, a {
+footer p,
+a {
   font-size: 0.8rem;
 }
 
-footer a{
+footer a {
   color: var(--bg-color);
   text-underline-offset: 0.3em;
 }
 
-.active a{
+.active a {
   background-color: var(--bg-color);
   border-radius: var(--border-radius);
   color: var(--fg-color);
@@ -101,10 +102,22 @@ footer a{
   align-items: center;
 }
 
+#logo {
+  filter: brightness(0) saturate(100%) invert(14%) sepia(7%) saturate(0%) hue-rotate(144deg) brightness(90%) contrast(96%);
+}
+
+@media (prefers-color-scheme: light) {
+  #logo {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1849%) hue-rotate(84deg) brightness(112%) contrast(62%);
+  }
+}
+
 /* Source: https://www.joshwcomeau.com/css/custom-css-reset/ */
 
 /* 1. Use a more-intuitive box-sizing model */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -129,18 +142,31 @@ body {
 }
 
 /* 6. Improve media defaults */
-img, picture, video, canvas, svg{
+img,
+picture,
+video,
+canvas,
+svg {
   display: block;
   max-width: 100%;
 }
 
 /* 7. Inherit fonts for form controls */
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
 /* 8. Avoid text overflows */
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -148,13 +174,20 @@ p, h1, h2, h3, h4, h5, h6 {
 p {
   text-wrap: pretty;
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   text-wrap: balance;
 }
 
 /*
   10. Create a root stacking context
 */
-#root, #__next {
+#root,
+#__next {
   isolation: isolate;
 }
