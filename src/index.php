@@ -14,23 +14,25 @@
         <?php include './includes/header.php'; ?>
         <? include './includes/utils-bar.php' ?>
     </div>
-    <section class="width padding flex-wrapper" style="align-items: start; justify-content: start; gap: 5em;">
-        <div>
-            <h2>Our encyclopedia for more<br>equal <i>knowledge</i></h2>
-            <? include './includes/search.php'?>
-        </div>
-        <div>
-            <img src="./public/images/Cats-cradle.svg" alt="useless decoration" draggable="false" class="no-select" style="width: 15em;">
-        </div>
-    </section>
-    <main class="width padding flex-wrapper">
-        <section>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit suscipit delectus quidem quos mollitia assumenda cumque, aut fugit, expedita commodi eveniet natus porro ut possimus culpa nulla libero molestiae iure.</p>
+    <div>
+        <section class="width padding flex-wrapper" style="align-items: start; justify-content: start; gap: 5em;">
+            <div>
+                <h2>Our encyclopedia for more<br>equal <i>knowledge</i></h2>
+                <? include './includes/search.php'?>
+            </div>
+            <div>
+                <img src="./public/images/Cats-cradle.svg" alt="useless decoration" draggable="false" class="no-select" style="width: 15em;">
+            </div>
         </section>
-        <aside>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab numquam cumque perferendis reprehenderit repudiandae. Quis asperiores incidunt sint. Corrupti voluptates ullam esse ab doloribus reprehenderit impedit quas sed consequatur.</p>
-        </aside>
-    </main>
+        <main class="width padding flex-wrapper">
+            <section>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit suscipit delectus quidem quos mollitia assumenda cumque, aut fugit, expedita commodi eveniet natus porro ut possimus culpa nulla libero molestiae iure.</p>
+            </section>
+            <aside>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem ab numquam cumque perferendis reprehenderit repudiandae. Quis asperiores incidunt sint. Corrupti voluptates ullam esse ab doloribus reprehenderit impedit quas sed consequatur.</p>
+            </aside>
+        </main>
+    </div>
 
     <?php include './includes/footer.php'; ?>
 </body>
