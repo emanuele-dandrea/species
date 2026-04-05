@@ -107,14 +107,13 @@ footer a {
 }
 
 .utils-bar {
-  background-color: var(--accent-color);
+  background-color: var(--border-color);
   height: fit-content;
-  border-top: 1px solid yellow;
-  border-bottom: 1px solid yellow;
 }
 
 .utils-bar a {
   padding: var(--padding) 0.6rem;
+  color: var(--bg-color);
 }
 
 .utils-bar > div {
@@ -125,6 +124,10 @@ footer a {
   #logo {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1849%) hue-rotate(84deg) brightness(112%) contrast(62%);
   }
+}
+
+footer hr {
+  color: var(--bg-color);
 }
 
 /* Source: https://www.joshwcomeau.com/css/custom-css-reset/ */

@@ -10,7 +10,10 @@
 </head>
 
 <body>
-    <?php include '../includes/header.php'; ?>
+    <div>
+        <?php include '../includes/header.php'; ?>
+        <? include '../includes/utils-bar.php' ?>
+    </div>
     <main class="padding flex-wrapper">
         <form action="" method="post">
             <h2>Login into Species</h2>
@@ -33,10 +36,12 @@
         margin-top: auto;
         display: block;
     }
+
     form h2 {
         margin-bottom: 1rem;
         cursor: default;
     }
+
     input {
         margin-bottom: 1rem;
         padding: 0.3rem 0.6rem;
@@ -45,28 +50,35 @@
         border: 0;
         color: var(--bg-color);
     }
+
     input:last-child {
         margin: 0;
     }
+
     #submit {
         background-color: var(--fg-color);
         color: var(--bg-color);
         cursor: pointer;
         transition: opacity ease-in-out 0.3s;
     }
+
     #submit:hover {
         opacity: 0.9;
     }
+
     input::placeholder {
         color: var(--bg-color);
     }
+
     form a {
         color: var(--fg-color);
     }
+
     input:focus {
         outline: 0.1em solid light-dark(gray, lightgray);
         outline-offset: 0.1em;
     }
+
     main {
         text-align: center;
     }

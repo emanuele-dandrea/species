@@ -49,7 +49,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-    <?php include '../includes/header.php'; ?>
+    <div>
+        <?php include '../includes/header.php'; ?>
+        <?php include '../includes/utils-bar.php'; ?>
+    </div>
     <main class="padding flex-wrapper">
         <form action="" method="post">
             <h2>Register on Species</h2>
@@ -81,7 +84,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         cursor: default;
     }
 
-    input{
+    input {
         margin-bottom: 1rem;
         padding: 0.3rem 0.6rem;
         border-radius: var(--border-radius);
@@ -95,7 +98,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         text-align: left;
         margin-bottom: 1em;
     }
-    
+
     input:last-child {
         margin: 0;
     }
