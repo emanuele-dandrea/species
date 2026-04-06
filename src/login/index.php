@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Species | Registration</title>
     <link rel="stylesheet" href="/public/css/main.css">
-    <?php include '../includes/meta.php'; ?>
+    <?php include '../src/includes/meta.php'; ?>
 </head>
 
 <body>
     <div>
-        <?php include '../includes/header.php'; ?>
-        <? include '../includes/utils-bar.php' ?>
+        <?php include '../src/includes/header.php'; ?>
+        <? include '../src/includes/utils-bar.php'; ?>
     </div>
     <main class="padding flex-wrapper">
         <form action="" method="post">

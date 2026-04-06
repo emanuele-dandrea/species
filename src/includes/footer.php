@@ -1,7 +1,7 @@
  <footer>
      <div class='width padding'>
          <div id="logo" class="flex-wrapper no-select">
-             <img src="/public/images/logo.svg" alt="Logo" draggable="false">
+             <img src="/images/logo.svg" alt="Logo" draggable="false">
              <p>Species</p>
          </div>
          <hr>

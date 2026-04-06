@@ -97,4 +97,4 @@
         display: none;
     }
 </style>
-<script src="../public/js/search.js"></script>
+<script src="/js/search.js"></script>

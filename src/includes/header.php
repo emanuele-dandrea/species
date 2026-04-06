@@ -10,7 +10,7 @@ $currentDir = trim(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH), '/');
 <header>
     <div class="width flex-wrapper padding">
         <div id="logo" class="flex-wrapper no-select">
-            <img src="/public/images/logo.svg" alt="Logo" draggable="false">
+            <img src="/images/logo.svg" alt="Logo" draggable="false">
             <h1>Species</h1>
         </div>
         <nav>
