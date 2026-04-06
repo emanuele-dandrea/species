@@ -1,0 +1,10 @@
+{
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^4.0",
+    "monolog/monolog": "^3.10"
+  },
+  "scripts": {
+    "cs": "phpcs src",
+    "cs-fix": "phpcbf src"
+  }
+}
