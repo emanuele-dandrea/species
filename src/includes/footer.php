@@ -28,37 +28,3 @@
      </div>
  </footer>
 
- <style>
-     footer #logo p {
-         font-size: 1.5em;
-         font-weight: bold;
-     }
-
-     .footer-content {
-         flex-direction: column;
-         justify-content: left;
-         flex-wrap: wrap;
-     }
-
-     .footer-content .flex-wrapper {
-         align-items: start;
-         gap: 2em;
-         justify-content: start;
-         margin-right: auto;
-     }
-
-     .nav-footer,
-     ul {
-         list-style: none;
-     }
-
-     hr {
-         margin: 1em 0;
-         color: var(--fg-color);
-     }
-     footer #logo.flex-wrapper{
-         img {
-             width: 2.5em;
-         }
-     }
- </style>

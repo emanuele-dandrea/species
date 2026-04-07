@@ -16,7 +16,8 @@
         <?php include __DIR__ . '/../src/includes/utils-bar.php'; ?>
     </div>
     <div>
-        <section class="width padding flex-wrapper" style="align-items: start; justify-content: start; gap: 5em;">
+        <section class="width padding flex-wrapper" style="align-items: start;
+        justify-content: start; gap: 5em;">
             <div>
                 <h2>Our encyclopedia for more<br>equal <i>knowledge</i></h2>
                 <?php include __DIR__ . '/../src/includes/search.php'; ?>
@@ -39,14 +40,3 @@
 </body>
 
 </html>
-<style>
-    section div img {
-        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(1849%) hue-rotate(84deg) brightness(112%) contrast(62%);
-    }
-
-    @media (prefers-color-scheme: light) {
-        section div img {
-            filter: brightness(0) saturate(100%) invert(14%) sepia(7%) saturate(0%) hue-rotate(144deg) brightness(90%) contrast(96%);
-        }
-    }
-</style>
