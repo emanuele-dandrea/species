@@ -22,8 +22,8 @@
                 <h2>Our encyclopedia for more<br>equal <i>knowledge</i></h2>
                 <?php include __DIR__ . '/../src/includes/search.php'; ?>
             </div>
-            <div>
-                <img src="/images/Cats-cradle.svg" alt="useless decoration" draggable="false" class="no-select" style="width: 15em;">
+            <div class="cats-cradle">
+                <img src="/images/Cats-cradle.svg" alt="useless decoration" draggable="false" class="no-select">
             </div>
         </section>
         <main class="width padding flex-wrapper">
